@@ -101,14 +101,14 @@ class Search extends React.Component{
 
 			if (provider == 'mopidy' || (this.props.mopidy_connected && this.props.uri_schemes_search_enabled)){
 				if (this.props.mopidy_search_results.query === undefined || this.props.mopidy_search_results.query != term){
-					this.props.mopidyActions.clearSearchResults();
+					//this.props.mopidyActions.clearSearchResults();
 					this.props.mopidyActions.getSearchResults(type, term);
 				}
 			}
 
 			if (provider == 'spotify' || (this.props.mopidy_connected && this.props.uri_schemes_search_enabled && this.props.uri_schemes_search_enabled.includes('spotify:'))){
 				if (this.props.spotify_search_results.query === undefined || this.props.spotify_search_results.query != term){
-					this.props.spotifyActions.clearSearchResults();
+					//this.props.spotifyActions.clearSearchResults();
 					this.props.spotifyActions.getSearchResults(type, term);
 				}
 			}
